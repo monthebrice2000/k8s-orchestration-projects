@@ -1,10 +1,10 @@
 <div align="center">
 
   <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*OUkIsw5zTOBTpO6deADotA.png" alt="logo" width="200" height="auto" />
-  <h1>:pushpin::star2: Kubernetes (K8s) Orchestration Projects</h1>
+  <h1>:pushpin::star2: Fullstack Notes App with Kubernetes</h1>
   
   <p>
-    Tous les projets de déploiements que j'ai développé avec Kubernetes (k8s)
+    Deploy Fullstack notes application with Kubernetes and Minikube
   </p>
   
   
