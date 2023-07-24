@@ -1,10 +1,10 @@
 <div align="center">
 
-  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*OUkIsw5zTOBTpO6deADotA.png" alt="logo" width="200" height="auto" />
+  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="200" height="auto" />
   <h1>:pushpin::star2: Kubernetes (K8s) Orchestration Projects</h1>
   
   <p>
-    Tous les projets de déploiements que j'ai développé avec Kubernetes (k8s)
+    All the deployment projects I have developed with Kubernetes (k8s)
   </p>
   
   
@@ -77,9 +77,9 @@
 ## :star2: About The Project [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
 ### :camera: Screenshots
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://dezyre.gumlet.io/images/blog/kubernetes-projects/Kubernetes_Projects.png?w=330&dpr=2.6" alt="screenshot" />
 </div>
-I make a sample microservice application using technology spring cloud, docker, postgresql and kubernetes. I use service discovery from the kubernetes service and usually from the spring boot framework side it also has a service discovery service namely eureka server. I create 3 microservice projects, namely category-service, product-service and gateway-service. category-service functions as provider of category data services, and then product-service functions as provider of product data service and finally gateway-service funtions as provider of routing to another microservice.
+All projects I have made with kubernetes (k8s)
 
 ### :space_invader: Tech Stack
 

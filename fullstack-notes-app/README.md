@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://miro.medium.com/v2/resize:fit:640/format:webp/1*OUkIsw5zTOBTpO6deADotA.png" alt="logo" width="200" height="auto" />
+  <img src="https://www.freecodecamp.org/news/content/images/2020/08/components-of-kubernetes.png" alt="logo" width="200" height="auto" />
   <h1>:pushpin::star2: Fullstack Notes App with Kubernetes</h1>
   
   <p>
@@ -77,9 +77,9 @@
 ## :star2: About The Project [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
 ### :camera: Screenshots
 <div align="center"> 
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <img src="https://www.freecodecamp.org/news/content/images/2020/08/ingress.svg" alt="screenshot" />
 </div>
-I make a sample microservice application using technology spring cloud, docker, postgresql and kubernetes. I use service discovery from the kubernetes service and usually from the spring boot framework side it also has a service discovery service namely eureka server. I create 3 microservice projects, namely category-service, product-service and gateway-service. category-service functions as provider of category data services, and then product-service functions as provider of product data service and finally gateway-service funtions as provider of routing to another microservice.
+I built a full-stack CRUD notes application with nginx as a reverse proxy and deployed it with Kubernetes & Minikube.
 
 ### :space_invader: Tech Stack
 
