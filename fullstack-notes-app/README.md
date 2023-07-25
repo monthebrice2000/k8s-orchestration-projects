@@ -138,56 +138,185 @@ This Project uses docker, containerd as default container runtime
 - <a href="https://kubernetes.io/docs/tasks/tools/">Install Kubectl, minikube</a>
 
 ### :gear: Installation
-Install my-project with mvn pakage
-```bash
-  git clone ...
-  cd my-project
-  mvn clean install package
-```
+Follow this link [minikube and kubectl](https://kubernetes.io/docs/tasks/tools/) to install minikube and kubectl
+I used minikube to create kubernetes cluster single node and kubectl to administrate and deploy resources in the cluster
 
-### :test_tube: Running Tests
-To run tests, run the following command
+To check if minikube is installing, run 
 ```bash
-  mvn test
+  minikube version
 ```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-1.PNG" alt="Minikube" height='400' border="0">
+</details>
 
-### :running: Run Locally
+To check kubectl installing, run
+```bash
+  kubectl version
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-2.png" alt="kubectl" height='400' border="0">
+</details>
+
+To start cluster, run 
+```bash
+  minikube start --namespace development --driver docker
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-3.png" alt="kubectl" height='400' border="0">
+</details>
+
+### :triangular_flag_on_post: Deploy Locally
 Clone the project
 ```bash
-  git clone https://github.com/Louis3797/awesome-readme-template.git
-```
-Go to the project directory
-```bash
-  cd my-project
-```
-Install dependencies
-```bash
-  mvn clean install
-```
-Build artifact jar
-```bash
-  mvn package
-```
-Build image 
-```bash
-  docker build -t <image-name> .
-  docker tag <image_name> <registry_name>/<image_name>:<tag_name>
-  docker push <registry_name>/<image_name>:<tag_name>
-```
-Push Image to registry
-```bash
-  docker push <registry_name>/<image_name>:<tag_name>
-```
-Start the server
-```bash
-  java -jar <jar_name>.jar
+  git clone git@github.com:monthebrice2000/k8s-orchestration-projects.git
 ```
 
-### :triangular_flag_on_post: Deployment
-To deploy this project, do this :
-- Step 1 : start minikube
-- Step 2 : 
-- Step 3 :
+Go to the project directory
+```bash
+  cd k8s-orchestration-projects/01_fullstack-notes-app/k8s
+```
+
+Create **development** namespace if not create:
+```bash
+  kubectl create -f namespace.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-4.png" alt="kubectl" height='400' border="0">
+</details>
+
+Get all namespace:
+```bash
+  kubectl get namespaces
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-5.png" alt="kubectl" height='400' border="0">
+</details>
+
+Create secret **postgres-secret**:
+```bash
+  kubectl create secret generic postgres-secret --from-literal=password=63eaQB9wtLqmNBpg
+```
+or
+```bash
+  kubectl apply -f postgres-secret.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-6.png" alt="kubectl" height='400' border="0">
+</details>
+
+Get all secrets:
+```bash
+  kubectl get secrets
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-7.png" alt="kubectl" height='400' border="0">
+</details>
+
+Set **Role Based Access Control** (RBAC):
+```bash
+  kubectl apply -f rbac-cluster.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-8.png" alt="kubectl" height='400' border="0">
+</details>
+
+Create **api-config-map** config map :
+```bash
+  kubectl create configmap  api-config-map --from-file api-config-map.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-9.png" alt="kubectl" height='400' border="0">
+</details>
+
+Create persistent volume claim **database-persistent-volume-claim** for postgres instance:
+```bash
+  kubectl apply -f database-persistent-volume-claim.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-10.png" alt="kubectl" height='400' border="0">
+</details>
+
+Deploy **postgres** resources and cluster IP service :
+```bash
+  kubectl apply -f postgres-deployment.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-11.png" alt="kubectl" height='400' border="0">
+</details>
+
+Deploy **client** resources and cluster IP service :
+```bash
+  kubectl apply -f client-deployment.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-12.png" alt="kubectl" height='400' border="0">
+</details>
+
+Deploy **api** resources and cluster IP service :
+```bash
+  kubectl apply -f api-deployment.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-13.png" alt="kubectl" height='400' border="0">
+</details>
+
+Deploy **ingress controller service** :
+```bash
+  kubectl apply -f ingress-service.yaml
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='400' border="0">
+</details>
+
+Enable addons ingress service on minikube :
+```bash
+  minikube addons enable ingress
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='400' border="0">
+</details>
+
+Look all services :
+```bash
+  kubectl get services
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-15.png" alt="kubectl" height='400' border="0">
+</details>
+
+Look all pods :
+```bash
+  kubectl get pods
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-16.png" alt="kubectl" height='400' border="0">
+</details>
+
+Look all deployments :
+```bash
+  kubectl get deplyoments
+```
+<details>
+<summary>Click to expand</summary>
+    <img src="./screenshots/screenshot-17.png" alt="kubectl" height='400' border="0">
+</details>
 
 ## :eyes: Usage [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
 To handle Role Based Access Control , run 
