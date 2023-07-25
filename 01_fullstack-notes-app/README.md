@@ -288,7 +288,7 @@ Enable addons ingress service on minikube :
 ```
 <details>
 <summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='400' border="0">
+    <img src="./screenshots/screenshot-18.png" alt="kubectl" height='400' border="0">
 </details>
 
 Look all services :
