@@ -26,7 +26,25 @@ spec:
               mountPath: /var/lib/postgresql/data
               subPath: postgres
           env:
+          # not putting the password directly anymore
             - name: POSTGRES_PASSWORD
-              value: 63eaQB9wtLqmNBpg
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-secret
+                  key: password
             - name: POSTGRES_DB
               value: notesdb
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: postgres
+  ports:
+    - port: 5432
+      targetPort: 5432

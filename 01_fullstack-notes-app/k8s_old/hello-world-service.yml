@@ -1,0 +1,27 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: gateway-service
+  namespace: development
+data:
+  application.yml: |-
+    spring:
+      application:
+        name: gateway-service
+      cloud:
+        gateway:
+          routes:
+            - id: CATEGORY-SERVICE
+              uri: lb://CATEGORY-SERVICE
+              predicates:
+                - Path=/category-service/**
+
+            - id: PRODUCT-SERVICE
+              uri: lb://PRODUCT-SERVICE
+              predicates:
+                - Path=/product-service/**
+    logging:
+      level:
+        org.springframework.web.HttpLogging: TRACE
+        reactor.netty.http.server: DEBUG
+        reactor.netty.http.client: DEBUG
