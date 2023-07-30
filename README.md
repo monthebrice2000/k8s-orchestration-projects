@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="200" height="auto" />
+  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="400" height="auto" />
   <h1>:pushpin::star2: Kubernetes (K8s) Orchestration Projects</h1>
   
   <p>
