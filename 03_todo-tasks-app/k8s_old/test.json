@@ -1,0 +1,412 @@
+{
+    "apiVersion": "v1",
+    "kind": "Node",
+    "metadata": {
+        "annotations": {
+            "container.googleapis.com/instance_id": "5934752548218706235",
+            "csi.volume.kubernetes.io/nodeid": "{\"filestore.csi.storage.gke.io\":\"gk3-auth-cluster-default-pool-a5132a07-s6fs\",\"gcsfuse.csi.storage.gke.io\":\"gk3-auth-cluster-default-pool-a5132a07-s6fs\",\"pd.csi.storage.gke.io\":\"projects/trans-sanctum-394312/zones/us-east1-d/instances/gk3-auth-cluster-default-pool-a5132a07-s6fs\"}",
+            "node.alpha.kubernetes.io/ttl": "0",
+            "node.gke.io/last-applied-node-labels": "addon.gke.io/node-local-dns-ds-ready=true,cloud.google.com/gke-boot-disk=pd-standard,cloud.google.com/gke-container-runtime=containerd,cloud.google.com/gke-cpu-scaling-level=2,cloud.google.com/gke-gcfs=true,cloud.google.com/gke-image-streaming=true,cloud.google.com/gke-logging-variant=DEFAULT,cloud.google.com/gke-max-pods-per-node=32,cloud.google.com/gke-netd-ready=true,cloud.google.com/gke-nodepool=default-pool,cloud.google.com/gke-os-distribution=cos,cloud.google.com/gke-provisioning=standard,cloud.google.com/gke-stack-type=IPV4,cloud.google.com/machine-family=e2,cloud.google.com/private-node=false,iam.gke.io/gke-metadata-server-enabled=true,node.kubernetes.io/masq-agent-ds-ready=true",
+            "node.gke.io/last-applied-node-taints": "",
+            "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+        },
+        "creationTimestamp": "2023-07-30T09:10:57Z",
+        "labels": {
+            "addon.gke.io/node-local-dns-ds-ready": "true",
+            "beta.kubernetes.io/arch": "amd64",
+            "beta.kubernetes.io/instance-type": "e2-medium",
+            "beta.kubernetes.io/os": "linux",
+            "cloud.google.com/gke-boot-disk": "pd-standard",
+            "cloud.google.com/gke-container-runtime": "containerd",
+            "cloud.google.com/gke-cpu-scaling-level": "2",
+            "cloud.google.com/gke-gcfs": "true",
+            "cloud.google.com/gke-image-streaming": "true",
+            "cloud.google.com/gke-logging-variant": "DEFAULT",
+            "cloud.google.com/gke-max-pods-per-node": "32",
+            "cloud.google.com/gke-netd-ready": "true",
+            "cloud.google.com/gke-nodepool": "default-pool",
+            "cloud.google.com/gke-os-distribution": "cos",
+            "cloud.google.com/gke-provisioning": "standard",
+            "cloud.google.com/gke-stack-type": "IPV4",
+            "cloud.google.com/machine-family": "e2",
+            "cloud.google.com/private-node": "false",
+            "failure-domain.beta.kubernetes.io/region": "us-east1",
+            "failure-domain.beta.kubernetes.io/zone": "us-east1-d",
+            "iam.gke.io/gke-metadata-server-enabled": "true",
+            "kubernetes.io/arch": "amd64",
+            "kubernetes.io/hostname": "gk3-auth-cluster-default-pool-a5132a07-s6fs",
+            "kubernetes.io/os": "linux",
+            "node.kubernetes.io/instance-type": "e2-medium",
+            "node.kubernetes.io/masq-agent-ds-ready": "true",
+            "topology.gke.io/zone": "us-east1-d",
+            "topology.kubernetes.io/region": "us-east1",
+            "topology.kubernetes.io/zone": "us-east1-d"
+        },
+        "name": "gk3-auth-cluster-default-pool-a5132a07-s6fs",
+        "resourceVersion": "272843",
+        "uid": "2effa473-76c3-470e-bfb3-2007867cdf48"
+    },
+    "spec": {
+        "podCIDR": "10.19.128.64/26",
+        "podCIDRs": [
+            "10.19.128.64/26"
+        ],
+        "providerID": "gce://trans-sanctum-394312/us-east1-d/gk3-auth-cluster-default-pool-a5132a07-s6fs"
+    },
+    "status": {
+        "addresses": [
+            {
+                "address": "10.142.0.10",
+                "type": "InternalIP"
+            },
+            {
+                "address": "35.237.236.35",
+                "type": "ExternalIP"
+            },
+            {
+                "address": "gk3-auth-cluster-default-pool-a5132a07-s6fs",
+                "type": "Hostname"
+            }
+        ],
+        "allocatable": {
+            "cpu": "940m",
+            "ephemeral-storage": "47060071478",
+            "hugepages-1Gi": "0",
+            "hugepages-2Mi": "0",
+            "memory": "2836144Ki",
+            "pods": "32"
+        },
+        "capacity": {
+            "cpu": "2",
+            "ephemeral-storage": "98831908Ki",
+            "hugepages-1Gi": "0",
+            "hugepages-2Mi": "0",
+            "memory": "4022960Ki",
+            "pods": "32"
+        },
+        "conditions": [
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "containerd is functioning properly",
+                "reason": "NoFrequentContainerdRestart",
+                "status": "False",
+                "type": "FrequentContainerdRestart"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "kernel has no deadlock",
+                "reason": "KernelHasNoDeadlock",
+                "status": "False",
+                "type": "KernelDeadlock"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "GcfsSnapshotter is functioning properly",
+                "reason": "NoFrequentGcfsSnapshotterRestart",
+                "status": "False",
+                "type": "FrequentGcfsSnapshotterRestart"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "GcfsSnapshotter on the node is functioning properly",
+                "reason": "GcfsSnapshotterIsHealthy",
+                "status": "False",
+                "type": "GcfsSnapshotterUnhealthy"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "GCFS Snapshotter has no missing layer",
+                "reason": "GcfsSnapshotterHasNoMissingLayer",
+                "status": "False",
+                "type": "GcfsSnapshotterMissingLayer"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "Filesystem is not read-only",
+                "reason": "FilesystemIsNotReadOnly",
+                "status": "False",
+                "type": "ReadonlyFilesystem"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "kubelet is functioning properly",
+                "reason": "NoFrequentKubeletRestart",
+                "status": "False",
+                "type": "FrequentKubeletRestart"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "Gcfsd is functioning properly",
+                "reason": "NoFrequentGcfsdRestart",
+                "status": "False",
+                "type": "FrequentGcfsdRestart"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "Gcfsd on the node is functioning properly",
+                "reason": "GcfsdIsHealthy",
+                "status": "False",
+                "type": "GcfsdUnhealthy"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "node is functioning properly",
+                "reason": "NoFrequentUnregisterNetDevice",
+                "status": "False",
+                "type": "FrequentUnregisterNetDevice"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "docker overlay2 is functioning properly",
+                "reason": "NoCorruptDockerOverlay2",
+                "status": "False",
+                "type": "CorruptDockerOverlay2"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:46:44Z",
+                "lastTransitionTime": "2023-07-30T09:11:01Z",
+                "message": "docker is functioning properly",
+                "reason": "NoFrequentDockerRestart",
+                "status": "False",
+                "type": "FrequentDockerRestart"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T09:10:57Z",
+                "lastTransitionTime": "2023-07-30T09:10:57Z",
+                "message": "NodeController create implicit route",
+                "reason": "RouteCreated",
+                "status": "False",
+                "type": "NetworkUnavailable"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:48:26Z",
+                "lastTransitionTime": "2023-07-30T09:06:47Z",
+                "message": "kubelet has sufficient memory available",
+                "reason": "KubeletHasSufficientMemory",
+                "status": "False",
+                "type": "MemoryPressure"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:48:26Z",
+                "lastTransitionTime": "2023-07-30T09:06:47Z",
+                "message": "kubelet has no disk pressure",
+                "reason": "KubeletHasNoDiskPressure",
+                "status": "False",
+                "type": "DiskPressure"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:48:26Z",
+                "lastTransitionTime": "2023-07-30T09:06:47Z",
+                "message": "kubelet has sufficient PID available",
+                "reason": "KubeletHasSufficientPID",
+                "status": "False",
+                "type": "PIDPressure"
+            },
+            {
+                "lastHeartbeatTime": "2023-07-30T15:48:26Z",
+                "lastTransitionTime": "2023-07-30T09:11:28Z",
+                "message": "kubelet is posting ready status. AppArmor enabled",
+                "reason": "KubeletReady",
+                "status": "True",
+                "type": "Ready"
+            }
+        ],
+        "daemonEndpoints": {
+            "kubeletEndpoint": {
+                "Port": 10250
+            }
+        },
+        "images": [
+            {
+                "names": [
+                    "gke.gcr.io/cilium/cilium@sha256:49a080637847287f3aa831bb6f0539ced224d8ecacbed723780a21a6bada61bc"
+                ],
+                "sizeBytes": 186544999
+            },
+            {
+                "names": [
+                    "asia.gcr.io/gke-release-staging/cilium/cilium@sha256:e5f9079de8e201bfff312661b7b2ef97dc396b8f5b7a0c0c597de94e8c90f449",
+                    "eu.gcr.io/gke-release-staging/cilium/cilium@sha256:e5f9079de8e201bfff312661b7b2ef97dc396b8f5b7a0c0c597de94e8c90f449",
+                    "gcr.io/gke-release-staging/cilium/cilium@sha256:e5f9079de8e201bfff312661b7b2ef97dc396b8f5b7a0c0c597de94e8c90f449",
+                    "asia.gke.gcr.io/cilium/cilium:v1.12.9-gke4.3",
+                    "eu.gke.gcr.io/cilium/cilium:v1.12.9-gke4.3"
+                ],
+                "sizeBytes": 184947446
+            },
+            {
+                "names": [
+                    "gke.gcr.io/cilium/cilium@sha256:855e4707100d5dc2d8039cda93655d1d33fcbdb82e07ce78242ec1247e2c448e"
+                ],
+                "sizeBytes": 184608518
+            },
+            {
+                "names": [
+                    "gke.gcr.io/prometheus-engine/prometheus@sha256:439d8ea40b2ff84a0c269ee981acd8dc531e47f7da2fabf1d98c4bb55c6eee12"
+                ],
+                "sizeBytes": 96903216
+            },
+            {
+                "names": [
+                    "gke.gcr.io/image-package-extractor@sha256:c97714b2d1744118b39499046622904867c02656962f58152def3e544bea6e93"
+                ],
+                "sizeBytes": 88976828
+            },
+            {
+                "names": [
+                    "gke.gcr.io/kube-proxy-amd64:v1.27.2-gke.1200",
+                    "k8s.gcr.io/kube-proxy-amd64:v1.27.2-gke.1200"
+                ],
+                "sizeBytes": 74721464
+            },
+            {
+                "names": [
+                    "gke.gcr.io/gcp-filestore-csi-driver@sha256:a1a875014f7d62eb9db907ee1965d61db19e7b8983c10840286891a864883ae1"
+                ],
+                "sizeBytes": 71594599
+            },
+            {
+                "names": [
+                    "asia.gcr.io/gke-release-staging/cilium/slim-daemon/anet-agent@sha256:476594c04a2c7a4e777c857b7cabe3ce8adcf66a78d8dd0a28872d999f44033d",
+                    "eu.gcr.io/gke-release-staging/cilium/slim-daemon/anet-agent@sha256:476594c04a2c7a4e777c857b7cabe3ce8adcf66a78d8dd0a28872d999f44033d",
+                    "gcr.io/gke-release-staging/cilium/slim-daemon/anet-agent@sha256:476594c04a2c7a4e777c857b7cabe3ce8adcf66a78d8dd0a28872d999f44033d",
+                    "asia.gke.gcr.io/cilium/slim-daemon/anet-agent:v1.12.9-gke4.3",
+                    "eu.gke.gcr.io/cilium/slim-daemon/anet-agent:v1.12.9-gke4.3"
+                ],
+                "sizeBytes": 60828810
+            },
+            {
+                "names": [
+                    "gke.gcr.io/gcp-compute-persistent-disk-csi-driver@sha256:657db3058de9ee61a28f95273bac24724d0039bba318dcadcf2727165eba30d7"
+                ],
+                "sizeBytes": 53530134
+            },
+            {
+                "names": [
+                    "gke.gcr.io/fluent-bit@sha256:c03635e4c828b9c6847df9780d6684b45ff0a70b1ae8c7e7271283cce472085e"
+                ],
+                "sizeBytes": 45820648
+            },
+            {
+                "names": [
+                    "gke.gcr.io/k8s-dns-node-cache@sha256:acc2b9124453fff034a5f4920e6a51b077c0f46f50691ac9fadef2cb18361e6c"
+                ],
+                "sizeBytes": 36351896
+            },
+            {
+                "names": [
+                    "gke.gcr.io/gke-metadata-server@sha256:6f8ec0ab9447c92ed37da1975361fdc4c1a702b0b2b507d91fa6b608b3c498a4"
+                ],
+                "sizeBytes": 35641454
+            },
+            {
+                "names": [
+                    "gke.gcr.io/prometheus-to-sd@sha256:654791db0d4d17c5847221fd3ace5c23ea1bb20c5976db9fda0853fd6000ab65"
+                ],
+                "sizeBytes": 34871038
+            },
+            {
+                "names": [
+                    "gke.gcr.io/prometheus-to-sd@sha256:8cd7e6b460418e25f80a4a0e8aa865bd5b716ea8750bfea4f6fc163c9b1c5dbb"
+                ],
+                "sizeBytes": 34319570
+            },
+            {
+                "names": [
+                    "gke.gcr.io/fluent-bit-gke-exporter@sha256:93014f5d546376de76c21f48bf30a6d1df3db4a413a1c3009c59fe46fa83eee8"
+                ],
+                "sizeBytes": 32490866
+            },
+            {
+                "names": [
+                    "gke.gcr.io/k8s-dns-dnsmasq-nanny@sha256:a223334c84a2ee6d34621ec564c6520db402a4a5bc9434017ef8890d6e84fcb3"
+                ],
+                "sizeBytes": 32135793
+            },
+            {
+                "names": [
+                    "gke.gcr.io/prometheus-engine/operator@sha256:258e2c3111c9b99b7b6e75e418785190db250751141cf94fbd4812c643636795"
+                ],
+                "sizeBytes": 30369787
+            },
+            {
+                "names": [
+                    "gke.gcr.io/k8s-dns-kube-dns@sha256:c07bc47c9dbbbc76f5e77d7b7d0f7206d61388a146f63de2da0f96179b57a83a"
+                ],
+                "sizeBytes": 28232185
+            },
+            {
+                "names": [
+                    "gke.gcr.io/metrics-server@sha256:1d20492ca374191e5b6ff4b7712b62b41ab75ce226424974356dc266e6e99e83"
+                ],
+                "sizeBytes": 26915699
+            },
+            {
+                "names": [
+                    "gke.gcr.io/gke-metrics-agent@sha256:8a2d20b7e403be765981ca6347d192f26be57dcf1e2e26554b800435dd984310"
+                ],
+                "sizeBytes": 26589955
+            },
+            {
+                "names": [
+                    "gke.gcr.io/k8s-dns-sidecar@sha256:f84174b9943f1210908ec2c27f7243b3f41808377f4846bc9c9c6d2f7a0169e0"
+                ],
+                "sizeBytes": 24871620
+            },
+            {
+                "names": [
+                    "gke.gcr.io/gcs-fuse-csi-driver@sha256:bbfd17b0d9c1013f70b8814f26a5c2b64359899c4b39ce4165330dd57124f939"
+                ],
+                "sizeBytes": 23900433
+            },
+            {
+                "names": [
+                    "asia.gcr.io/gke-release-staging/cilium/hubble-cli@sha256:a623b988c6811e0bbf3e7c6c2cc34244cf1fccfd7258d9dc25c0b56df86f284a",
+                    "eu.gcr.io/gke-release-staging/cilium/hubble-cli@sha256:a623b988c6811e0bbf3e7c6c2cc34244cf1fccfd7258d9dc25c0b56df86f284a",
+                    "gcr.io/gke-release-staging/cilium/hubble-cli@sha256:a623b988c6811e0bbf3e7c6c2cc34244cf1fccfd7258d9dc25c0b56df86f284a",
+                    "asia.gke.gcr.io/cilium/hubble-cli:v0.11.5-gke.0",
+                    "eu.gke.gcr.io/cilium/hubble-cli:v0.11.5-gke.0"
+                ],
+                "sizeBytes": 23505880
+            },
+            {
+                "names": [
+                    "gke.gcr.io/event-exporter@sha256:457dda454e42c2a7ccad69fe0af9cc3f005d734b24ad14f17ba88f74ba8b972e"
+                ],
+                "sizeBytes": 23472524
+            },
+            {
+                "names": [
+                    "asia.gcr.io/gke-release-staging/netd@sha256:0824bf99b0178968d7c5cff22efb295a4a4958fb90d2f3f73a38f8adb5d781fe",
+                    "eu.gcr.io/gke-release-staging/netd@sha256:0824bf99b0178968d7c5cff22efb295a4a4958fb90d2f3f73a38f8adb5d781fe",
+                    "gcr.io/gke-release-staging/netd@sha256:0824bf99b0178968d7c5cff22efb295a4a4958fb90d2f3f73a38f8adb5d781fe",
+                    "gke.gcr.io/netd@sha256:0824bf99b0178968d7c5cff22efb295a4a4958fb90d2f3f73a38f8adb5d781fe",
+                    "asia.gke.gcr.io/netd:v0.6.18-v0.2.4-gke.0"
+                ],
+                "sizeBytes": 19092029
+            }
+        ],
+        "nodeInfo": {
+            "architecture": "amd64",
+            "bootID": "c9cfc675-fff7-4650-bff1-fe6e766cf09e",
+            "containerRuntimeVersion": "containerd://1.7.0",
+            "kernelVersion": "5.15.109+",
+            "kubeProxyVersion": "v1.27.2-gke.1200",
+            "kubeletVersion": "v1.27.2-gke.1200",
+            "machineID": "df07c71a4296d0b6fcb23480a0e1b4fc",
+            "operatingSystem": "linux",
+            "osImage": "Container-Optimized OS from Google",
+            "systemUUID": "df07c71a-4296-d0b6-fcb2-3480a0e1b4fc"
+        }
+    }
+}
