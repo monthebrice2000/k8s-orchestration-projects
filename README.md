@@ -86,8 +86,9 @@ All projects I have made with kubernetes (k8s)
 
 | Project                                                                                                         | Short description                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
-|  |                                                                                |
+| [01_fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/01_fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
+|  [03_todo-tasks-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/03_todo-tasks-app)         | Deploy Authenticated Todo Task Application with Google Kubernetes Service                                                                                                                     |
+|                                                                                |
 
 
 ### :space_invader: Tech Stack
