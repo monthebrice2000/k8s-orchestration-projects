@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="200" height="auto" />
+  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="400" height="auto" />
   <h1>:pushpin::star2: Kubernetes (K8s) Orchestration Projects</h1>
   
   <p>
@@ -86,8 +86,9 @@ All projects I have made with kubernetes (k8s)
 
 | Project                                                                                                         | Short description                                                                                                                                        |
 | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
-|  |                                                                                |
+| [01_fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/01_fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
+|  [03_todo-tasks-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/03_todo-tasks-app)         | Deploy Authenticated Todo Task Application with Google Kubernetes Service                                                                                                                     |
+|                                                                                |
 
 
 ### :space_invader: Tech Stack

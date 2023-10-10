@@ -149,12 +149,13 @@ To check if kubectl and gcloud is installing, run
 I use kubectl v1.25.0, gcloud (Google Cloud SDK 406.0.0, beta 2022.10.17, bq 2.0.79, core 2022.10.17, gcloud-crc32c 1.0.0, gke-gcloud-auth-plugin 0.4.0, gsutil 5.14) , and docker CLI v20.10.17 and docker Server engine v20.10.17
 
 To handle credentials , install gke-gcloud-auth-plugin plugin:
+- <a href="https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke?hl=en">Install gke-gcloud-auth-plugin plugin</a>
 ```bash
   gcloud components install gke-gcloud-auth-plugin
 ```
 
 Activate GKE API:
-- <a href="https://console.cloud.google.com/apis/library/container.googleapis.com?project=trans-sanctum-394312">Activate Kubernetes Engine API </a>
+- <a href="https://console.cloud.google.com/apis/library/container.googleapis.com">Activate Kubernetes Engine API </a>
 <details>
 <summary>Click to expand</summary>
     <img src="./screenshots/screenshot-5.png" alt="kubectl" height='200' border="0">
