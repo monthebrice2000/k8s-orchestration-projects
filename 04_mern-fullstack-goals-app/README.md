@@ -210,15 +210,6 @@ Reuslt of request **goals-backend-service**/**goals-frontend-service**  service 
     <img src="./screenshots/screenshot-14.png" alt="kubectl" height='200' border="0">
 </details>
 
-Get nodes in GKE:
-```bash
-  kubectl get nodes -o wide
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-10.png" alt="kubectl" height='200' border="0">
-</details>
-
 ### :triangular_flag_on_post: Deployment
 Clone the project
 ```bash
