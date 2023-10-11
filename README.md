@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="400" height="auto" />
+  <img src="https://d33wubrfki0l68.cloudfront.net/69e55f968a6f44613384615c6a78b881bfe28bd6/42cd3/_common-resources/images/flower.svg" alt="logo" width="400" height="auto" border=3 />
   <h1>:pushpin::star2: Kubernetes (K8s) Orchestration Projects</h1>
   
   <p>
@@ -50,7 +50,7 @@
 <br />
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-<summary>Table of Contents</summary>
+<summary>📝 Table of Contents</summary>
   
 - [:star2: About The Project](#star2-about-the-project-)
   - [:camera: Screenshots](#camera-screenshots)
@@ -78,9 +78,9 @@
 ## :star2: About The Project [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 ### :camera: Screenshots
 <div align="center"> 
-  <img src="https://dezyre.gumlet.io/images/blog/kubernetes-projects/Kubernetes_Projects.png?w=330&dpr=2.6" alt="screenshot" />
+  <img src="https://dezyre.gumlet.io/images/blog/kubernetes-projects/Kubernetes_Projects.png?w=330&dpr=2.6" alt="screenshot" width="400" height="auto"/>
+  <div>All projects I have made with kubernetes (k8s)</div>
 </div>
-All projects I have made with kubernetes (k8s)
 
 ### :bar_chart: See All Projects
 
@@ -89,11 +89,11 @@ All projects I have made with kubernetes (k8s)
 | [01_fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/01_fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
 |  [03_todo-tasks-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/03_todo-tasks-app)         | Deploy Authenticated Todo Task Application with Google Kubernetes Service                                                                                                                     |
 |  [04_mern-fullstack-goals-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/04_mern-fullstack-goals-app)         | Deploy Fullstack Goals App with AWS ECS                                                                                                                |
-|
+<!-- | | -->
 
 ### :space_invader: Tech Stack
 
-<details>
+<!-- <details>
   <summary>API REST</summary>
   <ul>
     <li><img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/></li>
@@ -130,39 +130,44 @@ All projects I have made with kubernetes (k8s)
     <li><a href="https://minikube.sigs.k8s.io/docs/">Minikube</a></li>
   </ul>
 </details>
+-->
 
 ### :dart: Features
-  * [x] CRUD Category Service
+<!--   * [x] CRUD Category Service
   * [x] CRUD Product Service
   * [x] API Gateway Service
+-->
 
 ## :toolbox: Getting Started [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 
 ### :bangbang: Prerequisites
-This project uses Minikube to deploy Kubernetes cluster locally
+<!-- This project uses Minikube to deploy Kubernetes cluster locally
 ```bash
  minikube start --namespace="development"
 ```
 This Project uses docker, containerd as default container runtime
 - <a href="https://docs.docker.com/engine/install/ubuntu/">Install docker and containerd</a>
 - <a href="https://kubernetes.io/docs/tasks/tools/">Install Kubectl, minikube</a>
+-->
 
 ### :gear: Installation
-Install my-project with mvn pakage
+<!-- Install my-project with mvn pakage
 ```bash
   git clone ...
   cd my-project
   mvn clean install package
 ```
+-->
 
 ### :test_tube: Running Tests
-To run tests, run the following command
+<!-- To run tests, run the following command
 ```bash
   mvn test
 ```
+-->
 
 ### :running: Run Locally
-Clone the project
+<!-- Clone the project
 ```bash
   git clone https://github.com/Louis3797/awesome-readme-template.git
 ```
@@ -192,15 +197,17 @@ Start the server
 ```bash
   java -jar <jar_name>.jar
 ```
+-->
 
 ### :triangular_flag_on_post: Deployment
-To deploy this project, do this :
+<!-- To deploy this project, do this :
 - Step 1 : start minikube
 - Step 2 : 
 - Step 3 :
+-->
 
 ## :eyes: Usage [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
-To handle Role Based Access Control , run 
+<!-- To handle Role Based Access Control , run 
 ```bash
 kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
@@ -247,6 +254,7 @@ steps (checkbox, ... ) / unodored checkbox list todo
   <img src="https://user-images.githubusercontent.com/45077312/235615550-a5ee074e-45aa-4867-8223-6041aa677180.png" alt="Badge Genius" height='400' border="0">
   </details>
 *****************************************************
+-->
 
 ## :wave: Contributing [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 <a href="https://github.com/monthebrice2000/professional-portfolio-me/graphs/contributors">
@@ -263,15 +271,15 @@ See `contributing.md` for ways to get started.
 | [<img src="https://github.com/monthebrice2000.png?size=115" width=115><br><sub>@monthebrice2000</sub>](https://github.com/monthebrice2000) <br><br> [![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/monthebrice2000) | |
 
 ## :scroll: Code Of Conduct [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
-Please read the [Code of Conduct](https://github.com/monthebrice2000/professional-portfolio-me/blob/master/CODE_OF_CONDUCT.md)
+Please read the [Code of Conduct](https://github.com/monthebrice2000/k8s-orchestration-projects/blob/master/CODE_OF_CONDUCT.md)
 
 ## :closed_lock_with_key: Security [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
-Please read the [Security Policy](https://github.com/monthebrice2000/professional-portfolio-me/blob/master/SECURITY.md)
+Please read the [Security Policy](https://github.com/monthebrice2000/k8s-orchestration-projects/blob/master/SECURITY.md)
 
 ## :warning: License [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
-This project is licensed under the **MIT license**. Feel free to edit and distribute this template as you like.
+This project is licensed under the **Unlicense**. Feel free to edit and distribute this template as you like.
 
-See [LICENSE.txt](LICENSE) for more information.
+See [LICENSE](LICENSE) for more information.
 
 ## :handshake: Contact [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 Your Name - [![https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BriceMonthe1) - [![https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:monthedjeumoubrice2000@gmail.com)
