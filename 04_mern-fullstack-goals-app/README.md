@@ -10,25 +10,25 @@
   
 <!-- Badges -->
 <p>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/graphs/contributors">
-    <img src="https://img.shields.io/github/contributors/monthebrice2000/professional-portfolio-me" alt="contributors" />
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/monthebrice2000/k8s-orchestration-projects" alt="contributors" />
   </a>
   <a href="">
-    <img src="https://img.shields.io/github/last-commit/monthebrice2000/professional-portfolio-me" alt="last update" />
+    <img src="https://img.shields.io/github/last-commit/monthebrice2000/k8s-orchestration-projects" alt="last update" />
   </a>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/network/members">
-    <img src="https://img.shields.io/github/forks/monthebrice2000/professional-portfolio-me" alt="forks" />
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/network/members">
+    <img src="https://img.shields.io/github/forks/monthebrice2000/k8s-orchestration-projects" alt="forks" />
   </a>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/stargazers">
-    <img src="https://img.shields.io/github/stars/monthebrice2000/professional-portfolio-me" alt="stars" />
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/stargazers">
+    <img src="https://img.shields.io/github/stars/monthebrice2000/k8s-orchestration-projects" alt="stars" />
   </a>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/issues/">
-    <img src="https://img.shields.io/github/issues/monthebrice2000/professional-portfolio-me" alt="open issues" />
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/issues/">
+    <img src="https://img.shields.io/github/issues/monthebrice2000/k8s-orchestration-projects" alt="open issues" />
   </a>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/monthebrice2000/professional-portfolio-me.svg" alt="license" />
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/monthebrice2000/k8s-orchestration-projects.svg" alt="license" />
   </a>
-  <a href="https://github.com/monthebrice2000/professional-portfolio-me/pulls">
+  <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/pulls">
     <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="pull_request"/>
   </a>
   <a href="#">
@@ -37,13 +37,13 @@
 </p>
    
 <h4>
-    <a href="https://github.com/monthebrice2000/professional-portfolio-me/">View Demo</a>
+    <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/">View Demo</a>
   <span> · </span>
-    <a href="https://github.com/monthebrice2000/professional-portfolio-me/">Documentation</a>
+    <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/">Documentation</a>
   <span> · </span>
-    <a href="https://github.com/monthebrice2000/professional-portfolio-me/issues/">Report Bug</a>
+    <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/issues/">Report Bug</a>
   <span> · </span>
-    <a href="https://github.com/monthebrice2000/professional-portfolio-me/issues/">Request Feature</a>
+    <a href="https://github.com/monthebrice2000/k8s-orchestration-projects/issues/">Request Feature</a>
   </h4>
 </div>
 
@@ -77,38 +77,41 @@
 ### :camera: Screenshots
 <div align="center">
   <img src="https://www.wellarchitectedlabs.com/Security/300_Autonomous_Monitoring_Of_Cryptographic_Activity_With_KMS/Images/section2/section2-pattern1-ECR-architecture.png" alt="screenshot" width="500" height="auto"/>
+  <div>I built, containerized a php - expressjs full-stack goals application and deployed it in AWS Elastic Container Service.</div>
 </div>
-I built, containerized a php - expressjs full-stack goals application and deployed it in AWS Elastic Container Service.
 
 ### :space_invader: Tech Stack
 
 <details>
   <summary>Frontend Techs</summary>
   <ul>
-    <li>expressjs</li>
-    <li><img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/></li>
+    <li>Express JS</li>
+    <li>React JS</li>
+    <!-- <li><img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot"/></li> -->
   </ul>
 </details>
 
 <details>
   <summary>Migrations</summary>
   <ul>
-    <li><a href="https://hibernate.org/"><img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white"/></a></li>
+    <li>Mongoose</li>
+    <!-- <li><a href="https://hibernate.org/"><img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=Hibernate&logoColor=white"/></a></li> -->
   </ul>
 </details>
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://httpd.apache.org/"><img src="https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=white"/></a></li>
-    <li><a href="https://spring.io/projects/spring-cloud-gateway/">Spring Gateway</a></li>
+    <li>Node JS</li>
+    <!-- <li><a href="https://httpd.apache.org/"><img src="https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=Apache&logoColor=white"/></a></li>
+    <li><a href="https://spring.io/projects/spring-cloud-gateway/">Spring Gateway</a></li> -->
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/></li>
+    <!-- <li><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/></li> -->
     <li>Mongo DB, AWS DocumentDB</li>
   </ul>
 </details>
@@ -118,7 +121,8 @@ I built, containerized a php - expressjs full-stack goals application and deploy
   <ul>
     <li><a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white"/></a></li>
     <li><a href="https://kubernetes.io/"><img src="https://img.shields.io/badge/kubernetes-326ce5.svg?&style=for-the-badge&logo=kubernetes&logoColor=white"/></a></li>
-    <li>aws ec2, ssh, docker, aws ecr, aws iam, aws ecs, aws route 53</li>
+    <li>aws ec2+vpc, ssh, docker, aws ecr, aws iam, aws ecs, aws route 53, aws cloudwatch, aws efs, aws s3, aws RDS, aws DocumentDB,
+aws application load balancer, aws CloudFormation, aws Cloud Map</li>
   </ul>
 </details>
 
@@ -164,8 +168,19 @@ Login to AWS ECR with aws cli:
 ```
 <details>
   <summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-3.png" alt="kubectl" height='200' border="0">
+    <img src="./screenshots/screenshot-3.png" alt="kubectl" height='auto' border="0">
 </details>
+
+### :triangular_flag_on_post: Deployment
+Clone the project
+```bash
+  git clone git@github.com:monthebrice2000/k8s-orchestration-projects.git
+```
+
+Go to the project directory
+```bash
+  cd k8s-orchestration-projects/04_mern-fullstack-goals-app
+```
 
 Create **goals-backend-repo**/**goals-frontend-repo** ECR repositories | Build, Tag and Push Image to new ecr repository:
 - <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/getting-started-cli.html#cli-create-repository">Create a repository, Push an image to Amazon ECR</a>
@@ -200,222 +215,40 @@ Create **goals-backend-service**/**goals-frontend-service** service in ECS clust
     <img src="./screenshots/screenshot-9-2.png" alt="kubectl" height='200' border="0">
 </details>
 
-Reuslt of request **goals-backend-service**/**goals-frontend-service**  service in ECS cluster:
+
+### :test_tube: Tests
+Results of request **goals-backend-service**/**goals-frontend-service**  service in ECS cluster:
+
+Request Frontend **Goals App**:
 <details>
 <summary>Click to expand</summary>
     <img src="./screenshots/screenshot-10.png" alt="kubectl" height='200' border="0">
+</details>
+
+Request Backend **Goals API**:
+<details>
+<summary>Click to expand</summary>
     <img src="./screenshots/screenshot-11.png" alt="kubectl" height='200' border="0">
-    <img src="./screenshots/screenshot-12.png" alt="kubectl" height='200' border="0">
-    <img src="./screenshots/screenshot-13.png" alt="kubectl" height='200' border="0">
-    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='200' border="0">
 </details>
 
-### :triangular_flag_on_post: Deployment
-Clone the project
-```bash
-  git clone git@github.com:monthebrice2000/k8s-orchestration-projects.git
-```
-
-Go to the project directory
-```bash
-  cd k8s-orchestration-projects/03_todo-tasks-app
-```
-
-Get all namespace:
-```bash
-  kubectl get namespaces
-```
+Add **devops goal** / **development goal**:
 <details>
 <summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-12.png" alt="kubectl" height='200' border="0">
+    <img src="./screenshots/screenshot-12.png" alt="kubectl" height='200' border="0"><br>
+    <img src="./screenshots/screenshot-13.png" alt="kubectl" height='200' border="0"><br>
 </details>
 
-if you want to deploy without build images, avoid following steps
-Build Images:
-```bash
-  docker build -t <registry-repo-image>/kub-auth:latest ./auth-api
-  docker build -t <registry-repo-image>/kub-users:latest ./users-api
-  docker build -t <registry-repo-image>/kub-tasks:latest ./tasks-api
-```
+Delete **download goal**:
 <details>
 <summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-13.png" alt="kubectl" height='200' border="0">
-</details>
-
-Push images to private or public docker registry :
-```bash
-  docker push <registry-repo-image>/kub-auth:latest
-  docker push <registry-repo-image>/kub-users:latest
-  docker push <registry-repo-image>/kub-tasks:latest
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='200' border="0">
-</details>
-
-Set repository image name in each file like ./kubernetes/users.yaml, ./kubernetes/tasks.yaml, ./kubernetes/auth.yaml :
-```bash
-  [...]
-     spec:
-      containers:
-        - name: auth-api
-          image: <registry-name>/kub-auth:latest
-  [...]
-```
-
-Create **auth-sc** Storage Class for persistent volumes:
-```bash
-  kubectl apply -f ./kubernetes/aut-sc.yaml
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-18.png" alt="kubectl" height='200' border="0">
-</details>
-
-Deploy all resources (containers, pods, replicasets, deployments, services, persistenclaimvolumes, statefulset):
-```bash
-  kubectl apply -f ./kubernetes
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-15.png" alt="kubectl" height='200' border="0">
-</details>
-
-Look all services :
-```bash
-  kubectl get services -o wide
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-16.png" alt="kubectl" height='200' border="0">
-</details>
-
-Look all pods :
-```bash
-  kubectl get pods -o wide
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-17.png" alt="kubectl" height='200' border="0">
-</details>
-
-Look all volumes :
-```bash
-  kubectl get pvc
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-20.png" alt="kubectl" height='200' border="0">
-</details>
-
-Look all in one:
-```bash
-  kubectl get all
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-19.png" alt="kubectl" height='200' border="0">
-</details>
-
-### :test_tube: Tests
-Test **signup API**:
-```bash
-  POST http://34.139.66.228:80/signup
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-21.png" alt="kubectl" height='200' border="0">
-</details>
-
-Test **login API**:
-```bash
-  POST http://34.139.66.228:80/login
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-22.png" alt="kubectl" height='200' border="0">
-</details>
-
-Test **Create Task API**:
-```bash
-  POST http://34.148.230.166:80/tasks/
-```
-<details>
-<summary>Click to expand</summary>
-  <img src="./screenshots/screenshot-24.png" alt="kubectl" height='200' border="0">
-     <img src="./screenshots/screenshot-23.png" alt="kubectl" height='200' border="0">
-</details>
-
-Test **Get list of Task API**:
-```bash
-  GET http://34.148.230.166:80/tasks
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-25.png" alt="kubectl" height='400' border="0">
-</details>
-
-Test **Delete Task API**:
-```bash
-  POST http://34.148.230.166:80/tasks/?id=64c6ac6250f2de10e8a7e625
-```
-<details>
-<summary>Click to expand</summary>
-    <img src="./screenshots/screenshot-26.png" alt="kubectl" height='200' border="0">
+    <img src="./screenshots/screenshot-14.png" alt="kubectl" height='200' border="0"><br>
 </details>
 
 ## :eyes: Usage [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
-To handle Role Based Access Control , run 
-```bash
-kind: Role
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  namespace: default
-  name: namespace-reader
-rules:
-  - apiGroups: ["", "extensions", "apps"]
-    resources: ["configmaps", "pods", "services", "endpoints", "secrets"]
-    verbs: ["get", "list", "watch"]
-
----
-
-kind: RoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
-metadata:
-  name: namespace-reader-binding
-  namespace: default
-subjects:
-- kind: ServiceAccount
-  name: default
-  apiGroup: ""
-roleRef:
-  kind: Role
-  name: namespace-reader
-  apiGroup: ""
-```
-
-Also, Remove containerd/config.toml file by running 
-```bash
-  rm -rf /etc/containerd/config.toml
-  systemctl restart containerd
-  systemctl status containerd
-```
-
-*****************************************************
-emoji roadmap emoji top
-
-steps (checkbox, ... ) / unodored checkbox list todo
-
-- Extension
-  <details>
-  <summary>Click to expand</summary>
-  <img src="https://user-images.githubusercontent.com/45077312/235615550-a5ee074e-45aa-4867-8223-6041aa677180.png" alt="Badge Genius" height='400' border="0">
-  </details>
-*****************************************************
 
 ## :wave: Contributing [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
-<a href="https://github.com/monthebrice2000/professional-portfolio-me/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=monthebrice2000/professional-portfolio-me" />
+<a href="https://github.com/monthebrice2000/k8s-orchestration-projects/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=monthebrice2000/k8s-orchestration-projects" />
 </a>
 
 Everyone is welcome to contribute to this project. Feel free to open an issue if you have question or found a bug. Totally open to any suggestions and improvements.
@@ -428,20 +261,20 @@ See `contributing.md` for ways to get started.
 | [<img src="https://github.com/monthebrice2000.png?size=115" width=115><br><sub>@monthebrice2000</sub>](https://github.com/monthebrice2000) <br><br> [![](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/monthebrice2000) | |
 
 ## :scroll: Code Of Conduct [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
-Please read the [Code of Conduct](https://github.com/monthebrice2000/professional-portfolio-me/blob/master/CODE_OF_CONDUCT.md)
+Please read the [Code of Conduct](https://github.com/monthebrice2000/k8s-orchestration-projects/blob/master/CODE_OF_CONDUCT.md)
 
 ## :closed_lock_with_key: Security [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
-Please read the [Security Policy](https://github.com/monthebrice2000/professional-portfolio-me/blob/master/SECURITY.md)
+Please read the [Security Policy](https://github.com/monthebrice2000/k8s-orchestration-projects/blob/master/SECURITY.md)
 
 ## :warning: License [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
-This project is licensed under the **MIT license**. Feel free to edit and distribute this template as you like.
+This project is licensed under the **Unlicense**. Feel free to edit and distribute this template as you like.
 
-See [LICENSE.txt](LICENSE) for more information.
+See [LICENSE](../LICENSE) for more information.
 
 ## :handshake: Contact [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
 Your Name - [![https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BriceMonthe1) - [![https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:monthedjeumoubrice2000@gmail.com)
 
-Project Link: [![https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/monthebrice2000/professional-portfolio-me)
+Projects Link: [![https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/monthebrice2000/professional-portfolio-me)
 
 ## :gem: Acknowledgments [🔝](#pushpinstar2-spring-cloud-kubernetes-k8s)
 All useful resources and libraries that I have used in this projects
