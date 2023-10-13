@@ -89,6 +89,7 @@
 | [01_fullstack-notes-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/01_fullstack-notes-app)         | Deploy Fullstack notes application with Kubernetes and Minikube                                                                                                                     |
 |  [03_todo-tasks-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/03_todo-tasks-app)         | Deploy Authenticated Todo Task Application with Google Kubernetes Service                                                                                                                     |
 |  [04_mern-fullstack-goals-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/04_mern-fullstack-goals-app)         | Deploy Fullstack Goals App with AWS ECS                                                                                                                |
+|  [05_pern-cachingindex-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/05_pern-cachingindex-app)         | Deploy a PERN Caching Index App to Azure Container App Service with Travis CI                                                                                                             |
 <!-- | | -->
 
 ### :space_invader: Tech Stack
