@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    image: cachingindexregistry.azurecr.io/nginx-proxy:latest
+    ports:
+      - '80:80'
+    networks:
+      - calculator-host
+  api:
+    image: cachingindexregistry.azurecr.io/cachingindex-api:latest
+    environment:
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - PGUSER=${PGUSER}
+      - PGHOST=${PGHOST}
+      - PGDATABASE=${PGDATABASE}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+    networks:
+      - calculator-host
+  client:
+    stdin_open: true
+    image: cachingindexregistry.azurecr.io/cachingindex-app:latest
+    networks:
+      - calculator-host
+  worker:
+    image: cachingindexregistry.azurecr.io/worker-api:latest
+    environment:
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    networks:
+      - calculator-host
+
+networks:
+  calculator-host:
+    name: calculator-host

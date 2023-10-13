@@ -1,0 +1,44 @@
+sudo: required
+# language: generic
+
+services:
+  - docker
+
+before_install:
+  - docker build -t cachingindexregistry.azurecr.io/cachingindex-app-dev -f ./client/Dockerfile.dev ./client
+
+script:
+  - docker run -e CI=true cachingindexregistry.azurecr.io/cachingindex-app-dev npm test -- --coverage
+
+after_success:
+  - docker build -t cachingindexregistry.azurecr.io/cachingindex-app ./client
+  - docker build -t cachingindexregistry.azurecr.io/nginx-proxy ./nginx
+  - docker build -t cachingindexregistry.azurecr.io/cachingindex-api ./server
+  - docker build -t cachingindexregistry.azurecr.io/worker-api ./worker
+
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin $REGISTRY_NAME
+
+  - docker push cachingindexregistry.azurecr.io/cachingindex-app
+  - docker push cachingindexregistry.azurecr.io/nginx-proxy
+  - docker push cachingindexregistry.azurecr.io/cachingindex-api
+  - docker push cachingindexregistry.azurecr.io/worker-api
+
+
+# before_deploy:
+#   - echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin $REGISTRY_NAME
+#   - docker build -t $REGISTRY_NAME/react-app:latest -f Dockerfile .
+#   - docker push $REGISTRY_NAME/react-app:latest
+
+deploy:
+  provider: azure_web_apps
+  username: $AZURE_WA_USERNAME
+  password:
+    secure: $AZURE_WA_PASSWORD
+  site: $AZURE_WA_SITE
+  # slot: azure_deployment_slotname
+  on:
+    branch: master
+  #scripts:
+  #  - echo "finish deployment"
+
+

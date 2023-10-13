@@ -1,0 +1,73 @@
+version: '3'
+services:
+  # postgres:
+  #   image: 'postgres:latest'
+  #   environment:
+  #     - POSTGRES_PASSWORD=postgres_password
+  #   networks:
+  #     - calculator-host
+  # redis:
+  #   image: 'redis:latest'
+  #   networks:
+  #     - calculator-host
+  nginx:
+    depends_on:
+      - api
+      - client
+    restart: always
+    image: nginx-proxy:latest
+    # build:
+    #   dockerfile: Dockerfile.dev
+    #   context: ./nginx
+    ports:
+      - '80:80'
+    networks:
+      - calculator-host
+  api:
+    image: cachingindex-api:latest
+    # build:
+    #   dockerfile: Dockerfile.dev
+    #   context: ./server
+    # volumes:
+    #   - /app/node_modules
+    #   - ./server:/app
+    environment:
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+      - PGUSER=${PGUSER}
+      - PGHOST=${PGHOST}
+      - PGDATABASE=${PGDATABASE}
+      - PGPASSWORD=${PGPASSWORD}
+      - PGPORT=${PGPORT}
+    networks:
+      - calculator-host
+  client:
+    stdin_open: true
+    image: cachingindex-app:latest
+    # build:
+    #   dockerfile: Dockerfile.dev
+    #   context: ./client
+    # volumes:
+    #   - /app/node_modules
+    #   - ./client:/app
+    networks:
+      - calculator-host
+  worker:
+    image: worker-api:latest
+    # build:
+    #   dockerfile: Dockerfile.dev
+    #   context: ./worker
+    # volumes:
+    #   - /app/node_modules
+    #   - ./worker:/app
+    environment:
+      - REDIS_HOST=${REDIS_HOST}
+      - REDIS_PORT=${REDIS_PORT}
+      - REDIS_PASSWORD=${REDIS_PASSWORD}
+    networks:
+      - calculator-host
+
+networks:
+  calculator-host:
+    name: calculator-host
