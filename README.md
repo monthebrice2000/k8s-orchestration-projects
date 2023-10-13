@@ -285,10 +285,11 @@ See [LICENSE](LICENSE) for more information.
 ## :handshake: Contact [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 Your Name - [![https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/BriceMonthe1) - [![https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:monthedjeumoubrice2000@gmail.com)
 
-Project Link: [![https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/monthebrice2000/professional-portfolio-me)
+Projects Link: [![https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/monthebrice2000/professional-portfolio-me)
 
 ## :gem: Acknowledgments [🔝](#pushpinstar2-kubernetes-(K8s)-orchestration-projects)
 All useful resources and libraries that I have used in this projects
  - [Kubernetes docs](https://kubernetes.io/docs/home/)
  - [StackOver flow kubernetes solution](https://stackoverflow.com/questions/tagged/kubernetes)
+ - [AWS Elastic Container Service](https://docs.aws.amazon.com/fr_fr/AmazonECS/latest/developerguide/Welcome.html)
 
