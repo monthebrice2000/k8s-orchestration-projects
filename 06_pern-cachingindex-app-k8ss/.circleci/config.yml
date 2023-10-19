@@ -1,0 +1,131 @@
+# CircleCI configuration file
+version: 2.1
+
+orbs:
+  gh: circleci/github-cli@2.0
+
+executors:
+  my-executor:
+    # machine:
+    #   image: ubuntu-2204:2023.02.1
+    docker:
+      # - image: cimg/base:2022.06
+      # - image: cimg/base:stable
+      - image: google/cloud-sdk
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+    # environment:
+    #   SHA: default
+    working_directory: /app
+
+jobs:
+  build:
+    executor: my-executor
+    steps:
+      - run:
+          name: Remove all contents
+          command: |
+            rm -rf ./06_pern-cachingindex-app-k8s
+            ls    
+      - gh/install
+      - gh/setup
+      - gh/clone:
+          repo: $REPO_URL
+          dir: "06_pern-cachingindex-app-k8s"
+      - run: 
+          name: Get SHA git
+          command: |
+            ls
+            cd ./06_pern-cachingindex-app-k8s
+            git rev-parse HEAD > shared_var
+            ls
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: 
+          name: Login to Doker hub registry
+          command: |
+            echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USERNAME --password-stdin
+      - run:
+          name: Build application Docker image
+          command: |
+            cd ./06_pern-cachingindex-app-k8s
+            # docker pull hello-world
+            # docker tag hello-world hello-dev
+            docker build --cache-from=cachingindex-app-dev -t cachingindex-app-dev -f ./client/Dockerfile.dev ./client 
+      - run:
+          name: Save Docker image layer cache
+          command: |
+            # docker save -o app.tar hello-dev
+            docker save -o app.tar cachingindex-app-dev
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./06_pern-cachingindex-app-k8s
+            - ./app.tar
+  
+  test:
+    executor: my-executor
+    steps:
+      - attach_workspace:
+          at: ./
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Load Docker image layer cache
+          command: |
+            set +o pipefail
+            docker load -i ./app.tar | true
+      - run:
+          name: Run tests
+          command: |
+            # docker run hello-dev
+            docker run -e CI=true gcr.io/pern-cachingindex-project/cachingindex-app-dev npm test -- --coverage
+        
+
+  deploy:
+    executor: my-executor
+    steps:
+      - attach_workspace:
+          at: ./
+      # - run: 
+      #     name: Get SHA
+      #     command: |
+      #       echo $(pwd)
+      #       cd ./06_pern-cachingindex-app-k8s
+      #       ls
+      #       export SHA=$(cat shared_var)
+      #       echo $SHA
+      #       ls
+      - setup_remote_docker:  
+          docker_layer_caching: true
+      - run: 
+          name: Login to GCP
+          command: |
+            echo $GCLOUD_SERVICE_KEY > service-account-enc.json
+            base64 --decode service-account-enc.json > service-account.json
+            gcloud auth activate-service-account --key-file=service-account.json
+            gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
+            gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+            # gcloud auth configure-docker
+            gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
+            gcloud container clusters get-credentials ${K8S_CLUSTER} --zone ${GOOGLE_COMPUTE_ZONE} --project ${GCP_PROJECT}
+      - run:
+          name: "Deploy" 
+          command: |
+            cd ./06_pern-cachingindex-app-k8s
+            export SHA=$(cat shared_var)
+            echo $SHA
+            bash deploy.sh
+
+workflows:
+  build-test-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - test
+
