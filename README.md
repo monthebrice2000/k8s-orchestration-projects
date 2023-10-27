@@ -91,6 +91,7 @@
 |  [04_mern-fullstack-goals-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/04_mern-fullstack-goals-app)         | Deploy Fullstack Goals App with AWS ECS                                                                                                                |
 |  [05_pern-cachingindex-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/05_pern-cachingindex-app)         | Deploy a PERN Caching Index App to Azure Container App Service with Travis CI                                                                                                             |
 |  [06_pern-cachingindex-app-k8s](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/06_pern-cachingindex-app-k8s)         | Deploy a PERN Caching Index App to Google Kubernetes Service with Circle CI                                                                                                           |
+|  [10_serverless-greeting-app](https://github.com/monthebrice2000/k8s-orchestration-projects/tree/master/10_serverless-greeting-app)         | Deploy A Serveless Greeting App to Google Cloud Run with Github Action and Google Secrets Manager                                                                                                           |
 <!-- | | -->
 
 ### :space_invader: Tech Stack

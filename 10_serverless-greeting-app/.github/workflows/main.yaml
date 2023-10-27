@@ -1,0 +1,67 @@
+name: Test, Build, and Push to Google Cloud run
+
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+      - "18-end"
+      - "19-start"
+      - "19-end"
+      - "20-start"
+      - "20-end"
+      - "master"
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - name: Install requirements
+        run: |
+          python -m pip install -r src/requirements.txt
+          python -m pip install pytest
+      - name: Run tests
+        env:
+          MODE: "github actions"
+        run: |
+          pytest src/tests.py
+  build_deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      - id: 'auth'
+        name: 'Authenticate to Google Cloud'
+        uses: 'google-github-actions/auth@v1'
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+      - name: Build container image
+        run: |
+            export SHA=$(git rev-parse HEAD)
+            docker build -f Dockerfile -t inline-docker-tag .
+            docker tag inline-docker-tag ${{ secrets.CONTAINER_IMAGE_URL }}:latest
+            docker tag inline-docker-tag ${{ secrets.CONTAINER_IMAGE_URL }}:$SHA
+            gcloud auth configure-docker ${{ secrets.GCLOUD_REGION }}-docker.pkg.dev
+            docker push ${{ secrets.CONTAINER_IMAGE_URL }} --all-tags
+      - name: Deploy container to Cloud Run
+        run: |
+            export SHA=$(git rev-parse HEAD)
+            gcloud run deploy serverless-py-run \
+              --image=${{ secrets.CONTAINER_IMAGE_URL }}:$SHA \
+              --allow-unauthenticated \
+              --region=${{ secrets.GCLOUD_REGION }} \
+              --project=${{ secrets.GCLOUD_PROJECT_ID }}
+              # --set-secrets=ENV=py_env_file:latest
+              # --set-env-vars=MODE=entretien-embauche
